@@ -79,7 +79,7 @@
             >;
         };
 
-        layer_Layer__4 {
+        layer_#4 {
             bindings = <
  &trans      &macro_JPN1  &macro_JPN2  &macro_JPN3  &macro_JPN4  &macro_JPN5            &trans                                                  &trans  &macro_JPN6  &macro_JPN7  &macro_JPN8  &macro_JPN9       &macro_JPN0     &macro_JPMINUS1
  &trans  &macro_JPPERIOD    &macro_KA    &macro_TA    &macro_KO    &macro_SA            &trans                                                  &trans    &macro_RA    &macro_TI    &macro_KU    &macro_TU   &macro_JPCOMMA2     &macro_JPCOMMA1
