@@ -19,10 +19,9 @@
 #include <dt-bindings/zmk/backlight.h>
 
 / {
-    #include "combos.keymap"
-
   behaviors {
     #include "macros.dtsi"
+    #include "version.dtsi"
 
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
@@ -41,11 +40,11 @@
 
         default_layer {
             bindings = <
-        &kp ESC     &kp N1    &kp N2            &kp N3             &kp N4  &kp N5                          &tog 1                                                                                   &mo 3  &kp N6    &kp N7     &kp N8   &kp N9    &kp N0       &kp EQUAL
-        &kp TAB      &kp Q     &kp W             &kp E              &kp R   &kp T                           &none                                                                                   &none   &kp Y     &kp U      &kp I    &kp O     &kp P        &kp BSLH
-   &kp LEFT_ALT      &kp A     &kp S             &kp D              &kp F   &kp G                           &none      &mo 2                &mo 1                   &kp LGUI           &mo 1        &none   &kp H     &kp J      &kp K    &kp L  &kp SEMI         &kp SQT
-      &kp LCTRL      &kp Z     &kp X             &kp C              &kp V   &kp B                                             &mt LEFT_ALT DELETE                   &to 4                                &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp MINUS
- &kp LEFT_SHIFT  &kp GRAVE  &kp CAPS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET                    &mt LEFT_SHIFT SPACE  &kp ENTER       &mt LCTRL BSPC                   &kp INT5  &kp INT_HENKAN  &lt 2 ENTER          &kp LEFT  &kp RIGHT   &kp UP  &kp DOWN  &mt RSHFT BSPC
+        &kp ESC     &kp N1    &kp N2            &kp N3             &kp N4  &kp N5                          &tog 1                                                                                      &mo 3  &kp N6    &kp N7     &kp N8   &kp N9    &kp N0       &kp EQUAL
+        &kp TAB      &kp Q     &kp W             &kp E              &kp R   &kp T                           &none                                                                                      &none   &kp Y     &kp U      &kp I    &kp O     &kp P        &kp BSLH
+   &kp LEFT_ALT      &kp A     &kp S             &kp D              &kp F   &kp G                           &none    &kp TAB                &mo 1                      &kp LGUI           &mo 1        &none   &kp H     &kp J      &kp K    &kp L  &kp SEMI         &kp SQT
+      &kp LCTRL      &kp Z     &kp X             &kp C              &kp V   &kp B                                             &mt LEFT_ALT DELETE                  &macro_LCSP4                                &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp MINUS
+ &kp LEFT_SHIFT  &kp GRAVE  &kp CAPS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET                    &mt LEFT_SHIFT SPACE  &kp ENTER       &mt LCTRL BSPC                      &kp INT5  &kp INT_HENKAN  &lt 2 ENTER          &kp LEFT  &kp RIGHT   &kp UP  &kp DOWN  &mt RSHFT BSPC
             >;
         };
 
@@ -53,7 +52,7 @@
             bindings = <
      &kp ESC         &kp N1             &kp N2            &kp N3             &kp N4         &kp N5               &trans                                                                        &mo 3         &none  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp EQUAL
      &kp TAB      &kp CARET      &kp AMPERSAND     &kp LESS_THAN   &kp GREATER_THAN  &kp BACKSLASH                &none                                                                        &none   &kp INT_YEN   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS  &kp C_MENU
- &kp INT_YEN      &kp COLON          &kp GRAVE       &kp KP_LPAR        &kp KP_RPAR       &kp PIPE                &none      &mo 2      &mo 0                  &kp KP_ASTERISK  &kp SLASH      &none     &kp POUND   &kp KP_N4     &kp KP_N5      &kp KP_N6      &kp KP_PLUS    &kp RALT
+ &kp INT_YEN      &kp COLON          &kp GRAVE       &kp KP_LPAR        &kp KP_RPAR       &kp PIPE                &none    &kp TAB      &mo 0                  &kp KP_ASTERISK  &kp SLASH      &none     &kp POUND   &kp KP_N4     &kp KP_N5      &kp KP_N6      &kp KP_PLUS    &kp RALT
    &kp UNDER  &kp SEMICOLON   &kp SINGLE_QUOTE    &kp LEFT_BRACE    &kp RIGHT_BRACE      &kp SLASH                                    &kp INS                      &kp KP_PLUS                        &kp QUESTION   &kp KP_N1     &kp KP_N2      &kp KP_N3     &kp KP_EQUAL   &kp RCTRL
   &kp LSHIFT      &kp TILDE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp RIGHT_BRACKET                           &kp SPACE  &kp ENTER  &kp LCTRL                     &kp KP_MINUS  &kp SPACE  &kp ENTER                 &kp KP_N0     &kp COMMA     &kp KP_DOT     &kp KP_ENTER  &kp RSHIFT
             >;
@@ -61,11 +60,11 @@
 
         layer_fn {
             bindings = <
- &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5            &tog 1                                                   &mo 3    &kp F6     &kp F7     &kp F8     &kp F9  &kp F10          &kp F11
- &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none    &trans     &trans   &kp HOME    &kp END   &trans  &kp PRINTSCREEN
- &trans  &trans  &trans  &trans  &trans  &trans             &none   &mo 1   &mo 0                  &trans  &trans   &none  &kp LEFT  &kp RIGHT     &kp UP   &kp DOWN   &trans  &kp PAUSE_BREAK
- &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                     &none      &none  &kp PG_UP  &kp PG_DN   &trans   &sk KP_NUMLOCK
- &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans               &trans     &trans     &trans   &trans     &kp CAPSLOCK
+ &trans   &kp F1   &kp F2  &kp F3  &kp F4  &kp F5            &tog 1                                                   &mo 3    &kp F6     &kp F7     &kp F8     &kp F9  &kp F10        &kp K_APP
+ &trans  &kp F11  &kp F12  &trans  &trans  &trans             &none                                                   &none    &trans     &trans   &kp HOME    &kp END   &trans       &kp K_MENU
+ &trans   &trans   &trans  &trans  &trans  &trans             &none  &trans   &mo 0                  &trans  &trans   &none  &kp LEFT  &kp RIGHT     &kp UP   &kp DOWN   &trans  &kp PAUSE_BREAK
+ &trans   &trans   &trans  &trans  &trans  &trans                            &trans                  &trans                     &none      &none  &kp PG_UP  &kp PG_DN   &trans   &sk KP_NUMLOCK
+ &trans   &trans   &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans               &trans     &trans     &trans   &trans     &kp CAPSLOCK
             >;
         };
 
@@ -81,11 +80,11 @@
 
         layer_oyayubi {
             bindings = <
- &trans      &macro_JPN1  &macro_JPN2  &macro_JPN3  &macro_JPN4  &macro_JPN5            &trans                                                  &trans      &macro_JPN6  &macro_JPN7  &macro_JPN8  &macro_JPN9       &macro_JPN0     &macro_JPMINUS1
- &trans  &macro_JPPERIOD    &macro_KA    &macro_TA    &macro_KO    &macro_SA            &trans                                                  &trans      &macro_RA    &macro_TI    &macro_KU    &macro_TU   &macro_JPCOMMA2     &macro_JPCOMMA1
- &trans         &macro_U    &macro_SI    &macro_TE    &macro_KE    &macro_SE            &trans  &mo 2             &mo 1             &kp LGUI &mo 1  &trans  &macro_HA    &macro_TO    &macro_KI     &macro_I         &macro_NN  &macro_JPBACKSPACE
- &trans     &macro_JPTEN    &macro_HI    &macro_SU    &macro_HU    &macro_HE                        &mt LEFT_ALT DELETE               &to 0                &macro_ME    &macro_SO    &macro_NE    &macro_HO  &macro_JPNAKATEN         &macro_JPEN
- &kp LSHIFT       &trans       &trans       &trans       &trans                        &kp SPACE  &kp ENTER       &mt LCTRL BSPC &kp INT5  &kp INT_HENKAN  &kp ENTER                    &kp LEFT  &kp RIGHT   &kp UP  &kp DOWN  &mt RSHFT BSPC
+         &trans      &macro_JPN1  &macro_JPN2  &macro_JPN3  &macro_JPN4  &macro_JPN5               &trans                                                                               &trans  &macro_JPN6  &macro_JPN7  &macro_JPN8  &macro_JPN9       &macro_JPN0     &macro_JPMINUS1
+         &trans  &macro_JPPERIOD    &macro_KA    &macro_TA    &macro_KO    &macro_SA               &trans                                                                               &trans    &macro_RA    &macro_TI    &macro_KU    &macro_TU   &macro_JPCOMMA2     &macro_JPCOMMA1
+         &trans         &macro_U    &macro_SI    &macro_TE    &macro_KE    &macro_SE               &trans      &mo 2                &mo 1                  &kp LGUI           &mo 1     &trans    &macro_HA    &macro_TO    &macro_KI     &macro_I         &macro_NN  &macro_JPBACKSPACE
+         &trans     &macro_JPTEN    &macro_HI    &macro_SU    &macro_HU    &macro_HE                                  &mt LEFT_ALT DELETE                     &none                               &macro_ME    &macro_SO    &macro_NE    &macro_HO  &macro_JPNAKATEN         &macro_JPEN
+ &kp LEFT_SHIFT           &trans       &trans       &trans       &trans                         &kp SPACE  &kp ENTER       &mt LCTRL BSPC                  &kp INT5  &kp INT_HENKAN  &kp ENTER                  &kp LEFT    &kp RIGHT       &kp UP          &kp DOWN      &mt RSHFT BSPC
             >;
         };
 
