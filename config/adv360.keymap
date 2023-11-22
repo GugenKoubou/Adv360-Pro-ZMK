@@ -19,8 +19,6 @@
 #include <dt-bindings/zmk/backlight.h>
 
 / {
-#include "combos.keymap"
-
   behaviors {
     #include "macros.dtsi"
     #include "version.dtsi"
@@ -56,7 +54,7 @@
      &kp TAB      &kp CARET      &kp AMPERSAND     &kp LESS_THAN   &kp GREATER_THAN  &kp BACKSLASH                &none                                                                        &none   &kp INT_YEN   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS  &kp C_MENU
  &kp INT_YEN      &kp COLON          &kp GRAVE       &kp KP_LPAR        &kp KP_RPAR       &kp PIPE                &none    &kp TAB      &mo 0                  &kp KP_ASTERISK  &kp SLASH      &none     &kp POUND   &kp KP_N4     &kp KP_N5      &kp KP_N6      &kp KP_PLUS    &kp RALT
    &kp UNDER  &kp SEMICOLON   &kp SINGLE_QUOTE    &kp LEFT_BRACE    &kp RIGHT_BRACE      &kp SLASH                                    &kp INS                      &kp KP_PLUS                        &kp QUESTION   &kp KP_N1     &kp KP_N2      &kp KP_N3     &kp KP_EQUAL   &kp RCTRL
-  &kp LSHIFT      &kp TILDE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp RIGHT_BRACKET                           &kp SPACE  &kp ENTER  &kp LCTRL                     &kp KP_MINUS  &kp SPACE  &kp ENTER                 &kp KP_N0     &kp COMMA     &kp KP_DOT     &kp KP_ENTER  &kp RSHIFT
+  &kp LSHIFT      &kp TILDE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp RIGHT_BRACKET                           &kp ENTER  &kp SPACE  &kp LCTRL                     &kp KP_MINUS  &kp SPACE  &kp ENTER                 &kp KP_N0     &kp COMMA     &kp KP_DOT     &kp KP_ENTER  &kp RSHIFT
             >;
         };
 
